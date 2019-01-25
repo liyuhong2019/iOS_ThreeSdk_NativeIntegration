@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-LP-goG">
+                                <rect key="frame" x="15" y="35" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.04931640625" green="0.75721571180000002" blue="0.3410373263888889" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rba-fj-N3i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="微信登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="go2LoginWeChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMc-gC-uGF"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lyh165" translatesAutoresizingMaskIntoConstraints="NO" id="dB6-fo-kLn">
+                                <rect key="frame" x="157.5" y="83" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="R86-MA-x4h"/>
+                                    <constraint firstAttribute="width" constant="60" id="lSz-Ld-9ej"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="授权返回的信息:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PJj-bO-nCU">
+                                <rect key="frame" x="15" y="151" width="345" height="350"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="EPX-JZ-Alp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dB6-fo-kLn" firstAttribute="top" secondItem="Zki-LP-goG" secondAttribute="bottom" constant="8" id="3K7-zr-8XC"/>
+                            <constraint firstItem="PJj-bO-nCU" firstAttribute="top" secondItem="dB6-fo-kLn" secondAttribute="bottom" constant="8" id="ByU-pe-ocU"/>
+                            <constraint firstItem="dB6-fo-kLn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lo7-Rx-WFN"/>
+                            <constraint firstItem="Zki-LP-goG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="RpA-s8-Ebo"/>
+                            <constraint firstItem="PJj-bO-nCU" firstAttribute="trailing" secondItem="Zki-LP-goG" secondAttribute="trailing" id="eb6-vK-qCi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zki-LP-goG" secondAttribute="trailing" constant="15" id="kVs-3u-gFa"/>
+                            <constraint firstItem="PJj-bO-nCU" firstAttribute="leading" secondItem="Zki-LP-goG" secondAttribute="leading" id="xBB-BX-qiN"/>
+                            <constraint firstItem="Zki-LP-goG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="zlX-El-WDc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="dB6-fo-kLn" id="daF-RQ-Igu"/>
+                        <outlet property="tf_getWeChatInfo" destination="PJj-bO-nCU" id="02F-zc-yrp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lyh165" width="1242" height="1242"/>
+    </resources>
+</document>
